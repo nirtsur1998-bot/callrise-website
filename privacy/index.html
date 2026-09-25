@@ -59,8 +59,9 @@
 <ul>
   <li>the title, start and end time, all-day flag, status, creation and update times, event ID and link</li>
   <li>up to 10 attendees' names and email addresses, excluding you and meeting rooms</li>
+  <li>the event's description, so you can see it and edit it safely in the App. The App does not keep descriptions longer than 2,000 characters and shows them as read-only.</li>
 </ul>
-<p>The App does <strong>not</strong> keep event descriptions, locations, video-conference links or organizer details, even though Google includes them in its response. It discards them immediately.</p>
+<p>The App does <strong>not</strong> keep event locations or organizer details, even though Google includes them in its response. It discards them immediately.</p>
 
 <h3>How we use it</h3>
 <p>Google user data is used only to provide the user-facing calendar features described above:</p>
@@ -78,15 +79,16 @@
 <ul>
   <li><strong>Your authorization.</strong> The Google refresh token is encrypted with your operating system's secure storage and saved only on your computer. It is never uploaded to our servers. Access tokens are kept in memory only.</li>
   <li><strong>Calendar events.</strong> Events are stored on your computer. Each sync replaces the earlier copy, so it only holds the current 30-days-back to 90-days-ahead window.</li>
-  <li><strong>Events you edit in the App.</strong> If you edit a Google event inside the App, the App saves its own copy on your computer. That copy includes attendees.</li>
+  <li><strong>Events you edit in the App.</strong> If you edit a Google event inside the App, the App saves its own copy on your computer. That copy includes attendees and the description.</li>
+  <li><strong>Event descriptions</strong> stay on your computer. They are not uploaded to our servers, not included in your cloud backup, and not sent to any AI provider, even if you edit them in the App.</li>
   <li><strong>Meeting-prep briefs</strong> are saved on your computer.</li>
 </ul>
 
 <h3>When it leaves your computer</h3>
 <ul>
   <li><strong>Your chosen AI provider.</strong> When the App prepares a meeting brief or answers a question about your schedule, it sends that provider the event's title and time, and for briefs, the attendees' names and email addresses. It uses your API key (see section 1).</li>
-  <li><strong>CallRise AI cloud backup (Supabase).</strong> While you are signed in, events you have created or edited in the App are backed up to your account. The backup includes the title, times, your notes and the Google event ID, but <em>not</em> attendees or your Google account address. Events you have only viewed are not backed up. Call records are also backed up, and they can include speaker names that the App matched from meeting attendees.</li>
-  <li><strong>Google.</strong> If two-way sync is on, the changes you make are sent to Google Calendar.</li>
+  <li><strong>CallRise AI cloud backup (Supabase).</strong> While you are signed in, events you have created or edited in the App are backed up to your account. The backup includes the title, times, the Google event ID and any notes you wrote on events you created in the App. It does <em>not</em> include attendees, event descriptions from Google (edited or not), or your Google account address. Events you have only viewed are not backed up. Call records are also backed up, and they can include speaker names that the App matched from meeting attendees.</li>
+  <li><strong>Google.</strong> If two-way sync is on, the changes you make are sent to Google Calendar. An event's description is sent only if you changed it in the App. A change to a description replaces it in Google Calendar for everyone invited, and the App says so next to the description where you edit it.</li>
 </ul>
 <p>We do not share Google user data with anyone else, except where required by law or as part of a merger or acquisition, subject to this policy.</p>
 
@@ -102,6 +104,7 @@
 <ul>
   <li>subject, times and link</li>
   <li>attendees' names and email addresses</li>
+  <li>the event's body text (its description), stored only on your computer as for Google</li>
 </ul>
 <p>It stores and uses them in the same ways. Its token is encrypted on your computer. Disconnecting deletes the token and the synced events from your computer.</p>
 
