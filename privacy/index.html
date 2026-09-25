@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — CallRise AI</title>
+<meta name="description" content="How CallRise AI collects, uses, stores, shares and deletes your data, including data from Google Calendar.">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/"><img src="/icon.png" alt="">CallRise AI</a>
+  <nav><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="mailto:support@callrise-ai.com">Contact</a></nav>
+</div></header>
+
+<main><div class="wrap">
+<h1>Privacy Policy</h1>
+<p class="updated">Effective September 25, 2026</p>
+
+<p>This policy explains what data the CallRise AI desktop application (the "App") and its related services collect, how we use it, where it goes, and how you can delete it. The App and services are operated by <strong>CallRise AI Inc.</strong> ("CallRise AI", "we", "us"). If you have questions, contact <a href="mailto:support@callrise-ai.com">support@callrise-ai.com</a>.</p>
+
+<div class="note"><strong>Summary.</strong> CallRise AI is a desktop app. Most of your data is stored on your own computer. We send data to other services only to provide features you use: transcription, the AI provider <em>you</em> choose, and cloud backup of your account. We do not sell your data. We do not use it for advertising. We do not use Google user data to train AI models.</div>
+
+<h2>1. Data we handle</h2>
+
+<h3>Account information</h3>
+<p>When you create an account, we collect your email address and authenticate you using a one-time email verification code. Our backend provider, Supabase, stores your account.</p>
+
+<h3>Calls, transcripts and notes</h3>
+<p>When you use CallRise AI during a call, the App captures audio from your microphone and your computer's audio output and streams it to our transcription provider, Deepgram, to produce a live transcript. CallRise AI does not keep audio recordings of your calls. If you record a voice note for the in-app assistant, that audio is saved on your computer and is also sent to Deepgram for transcription. The App stores transcripts, call summaries, coaching notes, tasks, contacts, deals and your notes on your computer.</p>
+<p><strong>Recording consent.</strong> Laws in many places require you to tell the other people on a call, or get their consent, before you transcribe it. You are responsible for meeting the requirements that apply to your calls.</p>
+
+<h3>AI features and your AI provider</h3>
+<p>Summaries, coaching, live suggestions, meeting-prep briefs and the in-app assistant use a large language model from a provider you choose and connect with your own API key. The supported providers include Anthropic, OpenAI, Google Gemini, Groq, OpenRouter, Mistral, Cerebras, NVIDIA, Z.ai, Hugging Face and Cloudflare. When you use these features, the relevant content is sent to <em>your chosen provider</em> under <em>your</em> account with them. That content can include transcripts, notes and the calendar details described in section 2. That provider's own terms and privacy policy govern how it handles that content. Your API keys are stored encrypted on your computer using your operating system's secure storage (Keychain on macOS, DPAPI on Windows), and they are never uploaded to us.</p>
+
+<h3>Calendar data</h3>
+<p>If you connect Google Calendar or Microsoft Outlook, the App reads calendar data as described in section 2. Connecting a calendar is optional.</p>
+
+<h3>Payment information</h3>
+<p>If you buy a subscription, Stripe processes your payment. We receive the status of your subscription, not your card details.</p>
+
+<h3>Usage and diagnostics (off unless you opt in)</h3>
+<p>Anonymous usage and error diagnostics are <strong>off by default</strong> and are sent only if you opt in. They use a random identifier that is not linked to your account. Before sending, the App removes error messages and scrubs the text. Crash dumps are never uploaded. They are counted, then kept on your computer for 14 days.</p>
+
+<h2>2. Google user data</h2>
+<p>This section describes exactly how CallRise AI accesses, uses, stores and shares data from your Google Account.</p>
+
+<h3>What we access</h3>
+<div class="table-scroll"><table>
+<tr><th>Permission (scope)</th><th>When it is requested</th><th>What it is used for</th></tr>
+<tr><td><code>calendar.readonly</code><br>See your calendars and events</td><td>When you click Connect Google Calendar</td><td>Showing your meetings in the App, recognising which meeting a call belongs to, and preparing pre-meeting briefs</td></tr>
+<tr><td><code>calendar.events</code><br>Create, edit and delete events</td><td>Only if you separately turn on two-way sync. It is a separate authorization and is never requested at first connect.</td><td>Letting you create, edit and delete your own calendar events, and set their reminders, from inside the App</td></tr>
+</table></div>
+<p>CallRise AI does not request access to Gmail, Google Drive, Contacts or any other Google service.</p>
+
+<h3>Which fields the App keeps</h3>
+<p>From your calendars the App reads the calendar list (name, ID, whether it is your primary calendar, and your access level). It also reads events from 30 days in the past to 90 days ahead. For each event it keeps:</p>
+<ul>
+  <li>the title, start and end time, all-day flag, status, creation and update times, event ID and link</li>
+  <li>up to 10 attendees' names and email addresses, excluding you and meeting rooms</li>
+</ul>
+<p>The App does <strong>not</strong> keep event descriptions, locations, video-conference links or organizer details, even though Google includes them in its response. It discards them immediately.</p>
+
+<h3>How we use it</h3>
+<p>Google user data is used only to provide the user-facing calendar features described above:</p>
+<ul>
+  <li>your calendar view</li>
+  <li>linking calls to meetings</li>
+  <li>meeting-prep briefs</li>
+  <li>speaker names on call transcripts</li>
+  <li>answers from the in-app assistant about your schedule</li>
+  <li>editing events, if you turned on two-way sync</li>
+</ul>
+<p>We do not use Google user data for advertising, and we do not sell it. We do not use it to develop, improve or train generalized AI or machine-learning models, and we do not allow others to. No CallRise AI employee reads your Google user data, except with your explicit permission (for example, to resolve a support request you send), when needed for security, or when required by law.</p>
+
+<h3>Where it is stored</h3>
+<ul>
+  <li><strong>Your authorization.</strong> The Google refresh token is encrypted with your operating system's secure storage and saved only on your computer. It is never uploaded to our servers. Access tokens are kept in memory only.</li>
+  <li><strong>Calendar events.</strong> Events are stored on your computer. Each sync replaces the earlier copy, so it only holds the current 30-days-back to 90-days-ahead window.</li>
+  <li><strong>Events you edit in the App.</strong> If you edit a Google event inside the App, the App saves its own copy on your computer. That copy includes attendees.</li>
+  <li><strong>Meeting-prep briefs</strong> are saved on your computer.</li>
+</ul>
+
+<h3>When it leaves your computer</h3>
+<ul>
+  <li><strong>Your chosen AI provider.</strong> When the App prepares a meeting brief or answers a question about your schedule, it sends that provider the event's title and time, and for briefs, the attendees' names and email addresses. It uses your API key (see section 1).</li>
+  <li><strong>CallRise AI cloud backup (Supabase).</strong> While you are signed in, events you have created or edited in the App are backed up to your account. The backup includes the title, times, your notes and the Google event ID, but <em>not</em> attendees or your Google account address. Events you have only viewed are not backed up. Call records are also backed up, and they can include speaker names that the App matched from meeting attendees.</li>
+  <li><strong>Google.</strong> If two-way sync is on, the changes you make are sent to Google Calendar.</li>
+</ul>
+<p>We do not share Google user data with anyone else, except where required by law or as part of a merger or acquisition, subject to this policy.</p>
+
+<h3>Limited Use</h3>
+<p>CallRise AI's use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h3>Disconnecting Google</h3>
+<p>Choose <strong>Settings → Disconnect</strong> for Google Calendar, or sign out. When you do, the App asks Google to revoke its access, then deletes the stored token and the synced event cache from your computer. You can also remove access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+<p>Disconnecting does not remove copies of events you edited in the App, saved meeting briefs, or data already backed up to your account. To remove those, see section 5.</p>
+
+<h2>3. Microsoft Outlook calendar</h2>
+<p>If you connect Outlook, the App requests read-only calendar access. If you turn on two-way sync, it requests read-and-write access. It reads the same kinds of fields as for Google:</p>
+<ul>
+  <li>subject, times and link</li>
+  <li>attendees' names and email addresses</li>
+</ul>
+<p>It stores and uses them in the same ways. Its token is encrypted on your computer. Disconnecting deletes the token and the synced events from your computer.</p>
+
+<h2>4. Cloud backup</h2>
+<p>When you are signed in, the App backs some data up to your CallRise AI account so it can be restored on another computer:</p>
+<ul>
+  <li><strong>Always, while you are signed in:</strong>
+    <ul>
+      <li>your tasks</li>
+      <li>events you created or edited in the App</li>
+      <li>call records: title, summary, coaching notes (without quotes), linked contacts and deals, speaker names, attachment names and your recording-consent record. Full transcripts are not included.</li>
+    </ul>
+  </li>
+  <li><strong>On by default for new installs; you can turn them off in Settings:</strong> the assistant's long-term memory ("Sales Brain") and your conversations with the in-app assistant.</li>
+  <li><strong>Off unless you turn them on:</strong> full transcripts, attachments, your knowledge base, settings and contacts.</li>
+</ul>
+<p>Turning an optional category off deletes that category from your cloud backup.</p>
+
+<h2>5. Retention and deletion</h2>
+<p>Data on your computer stays there until you delete it in the App or uninstall the App and remove its data folder. Data in your cloud backup stays until you delete it or ask us to delete your account.</p>
+<p>When you delete some items in the App (for example, a task, event or call), the cloud backup marks them as deleted rather than removing them right away. They are removed permanently when your account is deleted.</p>
+<p><strong>To delete your account and all of your cloud data</strong>, email <a href="mailto:support@callrise-ai.com">support@callrise-ai.com</a> from the address you signed up with. We will confirm the request, then delete your account and everything stored with it within 30 days. This includes any backed-up data that came from Google or Microsoft. Data held by the AI provider you chose is governed by your account with that provider.</p>
+
+<h2>6. Service providers</h2>
+<div class="table-scroll"><table>
+<tr><th>Provider</th><th>Purpose</th><th>Data involved</th></tr>
+<tr><td>Supabase</td><td>Account sign-in, cloud backup, alerts, opt-in diagnostics</td><td>Email address; the backup data in section 4; alert settings; anonymous diagnostics if you opted in</td></tr>
+<tr><td>Deepgram</td><td>Speech-to-text</td><td>Call audio and assistant voice notes</td></tr>
+<tr><td>Your chosen AI provider</td><td>AI features</td><td>Transcripts, notes and calendar details, as described above</td></tr>
+<tr><td>Stripe</td><td>Payments</td><td>Billing details you give Stripe</td></tr>
+<tr><td>Resend, Telegram, WhatsApp (Meta)</td><td>Alerts you set up</td><td>The destination you choose. Alert messages are generic and do not include event details.</td></tr>
+<tr><td>Google, Microsoft</td><td>Calendar connection</td><td>As described in sections 2 and 3</td></tr>
+</table></div>
+<p>The App also downloads an on-device language model from Hugging Face. No data of yours is sent in that download.</p>
+
+<h2>7. Security</h2>
+<p>Connections to our services and providers use HTTPS/TLS. Calendar tokens and AI keys are encrypted on your computer with your operating system's secure storage. Access to your cloud backup is limited to your own signed-in account. No system is perfectly secure, but we work to protect your data and will notify you of a breach as required by law.</p>
+
+<h2>8. Your rights</h2>
+<p>Depending on where you live, you may have the right to access, correct, export or delete your personal data, or to object to how we process it. To make a request, contact <a href="mailto:support@callrise-ai.com">support@callrise-ai.com</a>. We will respond within the time required by applicable law.</p>
+
+<h2>9. Children</h2>
+<p>CallRise AI is a business tool and is not intended for anyone under 16. We do not knowingly collect data from children.</p>
+
+<h2>10. International transfers</h2>
+<p>Our service providers may process data in countries other than yours. Where required, we rely on appropriate safeguards for these transfers.</p>
+
+<h2>11. Changes</h2>
+<p>If we change this policy, we will update the effective date above. If a change is material, we will notify you in the App or by email before it takes effect.</p>
+
+<h2>12. Contact</h2>
+<p>CallRise AI Inc. — <a href="mailto:support@callrise-ai.com">support@callrise-ai.com</a></p>
+</div></main>
+
+<footer class="site"><div class="wrap">
+  <span>&copy; 2026 CallRise AI Inc.</span>
+  <a href="/privacy/">Privacy Policy</a>
+  <a href="/terms/">Terms of Service</a>
+  <a href="mailto:support@callrise-ai.com">support@callrise-ai.com</a>
+</div></footer>
+</body>
+</html>
